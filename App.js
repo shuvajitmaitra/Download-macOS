@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// App.js
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import Home from "./Screen/Home";
+import DualMode from "./Screen/DualMode";
+import SquadMode from "./Screen/SquadMode";
 
-export default function App() {
+const Stack = createStackNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ headerShown: false, headerTitleAlign: "center" }}
+        />
+        <Stack.Screen
+          name="DualMode"
+          component={DualMode}
+          options={{ title: "Dual Mode", headerTitleAlign: "center" }}
+        />
+        <Stack.Screen
+          name="SquadMode"
+          component={SquadMode}
+          options={{ title: "Squad Mode", headerTitleAlign: "center" }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
