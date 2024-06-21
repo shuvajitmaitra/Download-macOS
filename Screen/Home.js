@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: responsiveScreenFontSize(2.5),
     fontWeight: "500",
+    color: "white",
   },
   modeButtonContainer: {
     backgroundColor: Colors.Background,
@@ -66,7 +67,8 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.Background,
   },
   logo: {
-    backgroundColor: "#A0C1D1",
+    backgroundColor: Colors.Primary,
+    color: "white",
     marginVertical: responsiveScreenHeight(2),
     fontSize: responsiveScreenFontSize(4),
     textAlign: "center",

@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Call-Counter",
-    "slug": "Call-Counter",
+    "slug": "call-counter",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,10 +18,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.shuvajitmaitra.CallCounter"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b79cdd61-9ef5-4bff-8c4e-aa85c52a6cf8"
+      }
+    },
+    "owner": "shuvajitmaitra"
   }
 }
